@@ -1,9 +1,9 @@
 # counter
 
 ```
-import "https://hashsan.github.io/counter/counter.js" //gitcounter()
+import "https://hashsan.github.io/counter/getCounter.js"
 
-const counter = gitcounter('https://hashsan.github.io/counter') //set the stock repo
+const counter = getCounter('https://hashsan.github.io/counter') //set the stock repo
 {
   var filename = 'test.jpg'
   var n = await counter.get(filename)  //make test.txt;// .jpg -----> .txt
