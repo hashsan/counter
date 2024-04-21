@@ -36,7 +36,7 @@ function gitCounter(githubPagesUrl,token) {
       return parseInt(content);
     } catch (error) {
       //throw new Error("Failed to get count: " + error.message);
-      return null;
+      return 0;
     }
   }
 
