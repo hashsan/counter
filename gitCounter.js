@@ -77,6 +77,8 @@ function gitCounter(githubPagesUrl,token) {
   return { get, add, getSha };
 }
 
+window.gitCounter = gitCounter
+
 /*
 async function done(){
 
