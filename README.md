@@ -18,3 +18,12 @@ async function done(){
 
 document.querySelector('button').onclick = done;
 ```
+
+## short cut : counter(name,targetquery)
+
+```html
+<label id="mycounter" data-counter></label>
+<script src="https://hashsan.github.io/counter/counter.js"
+ onload ="counter('mycounter1','#mycounter')"
+></script>
+```
