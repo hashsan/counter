@@ -27,7 +27,29 @@ document.querySelector('button').onclick = done;
    2-3. await gitWrite.list(name) or await gitWrite.get(name)
    
 ## textと画像に関して
-1. 判定は、const flg = isImage(name)
+1. 判定は、const flg = isImage(name) //<-----未実装
 2. 拡張子で簡易識別するので、拡張子間違えると大変、基本はテキスト
    1-1. 画像以外はテキスト
    1-2. 画像はurl、gif,jpeg,jpg,png,webp,avif,bmp,icon,svg
+
+
+```
+import "https://hashsan.github.io/counter/gitWrite.js"
+
+var git = gitWrite('https://hashsan.github.io/counter')
+
+document.querySelector('#write').onclick =async()=>{
+  var name ='sample.txt'
+  var text = document.querySelector('#input').value
+  await git.write(name,text)
+  var _text = await git.get(name)
+  document.querySelector('#result').textContent = _text
+  console.log(_text)
+  
+  var list = await git.list()
+  console.log(list)
+  
+}
+
+```
+   
