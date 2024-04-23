@@ -18,3 +18,16 @@ async function done(){
 
 document.querySelector('button').onclick = done;
 ```
+
+## gitWrite仕様
+1. 呼び出しは、const git = gitWrite(url,token)
+2. インターフェイスは、新規更新、読み込み、一覧、一覧かファイルかは自動判別
+   2-1. await gitWrite.write(name,data)
+   2-2. await gitWrite.get(name)
+   2-3. await gitWrite.list(name) or await gitWrite.get(name)
+   
+## textと画像に関して
+1. 判定は、const flg = isImage(name)
+2. 拡張子で簡易識別するので、拡張子間違えると大変、基本はテキスト
+   1-1. 画像以外はテキスト
+   1-2. 画像はurl、gif,jpeg,jpg,png,webp,avif,bmp,icon,svg
